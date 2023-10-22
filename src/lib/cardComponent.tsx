@@ -17,14 +17,14 @@ const Card = (props: Props) => {
         default:
             throw new Error(`Error!`);
         }
-    }
+    };
 
     return (
         <span className={`card rank-${props.rank} ${props.suit}`}>
-            <span className="rank">{props.rank}</span>
+            <span className="rank">{props.rank.toUpperCase()}</span>
             <span className="suit">{getSuit(props.suit)}</span>
         </span>
-    )
-}
+    );
+};
 
 export default Card;

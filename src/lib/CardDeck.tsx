@@ -2,7 +2,7 @@ import Card from "./Card";
 
 class CardDeck {
     public allCard: Card[] = [];
-    private allRanks: string[] = ['2','3','4','5','6','7','8','9','10','J','Q','K','T'];
+    private allRanks: string[] = ['2','3','4','5','6','7','8','9','10','j','q','k','t'];
     private allSuits: string[] = ['diams','hearts','clubs','spades'];
 
     constructor()
@@ -13,10 +13,10 @@ class CardDeck {
                 this.allCard.push(card);
             }
         }
-    }
+    };
 
     getCard() {
-        const random = Math.floor(Math.random() * 52);
+        const random = Math.floor(Math.random() * this.allCard.length);
         const card = this.allCard.splice(random, 1)[0];
         return card;
     };
@@ -27,7 +27,7 @@ class CardDeck {
             arrayCards.push(this.getCard());
         }
         return arrayCards;
-    }
+    };
 }
 
 export default CardDeck;

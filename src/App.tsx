@@ -1,16 +1,30 @@
 import './App.css'
+import Card from './lib/Card';
 import CardComponent from './lib/cardComponent'
 import CardDeck from './lib/CardDeck'
+import {useState} from 'react';
 
 function App() {
-  const deck = new CardDeck();
-  console.log(deck.getCards(5));
+  const [cards, setCards] = useState<Card[]>([]);
 
-  return (
-    <div className="playingCards faceImages">
-      <CardComponent rank='k' suit='hearts'/>
+  const buttonFunction = () => {
+    const deck = new CardDeck();
+    const hand = deck.getCards(5);
+    setCards(hand);
+  };
+
+  return(
+    <div className='app'>
+      <button type='button' className='button' onClick={buttonFunction}>
+        Раздать карты:
+      </button>
+      <div className='playingCards faceImages'>
+        {cards.map((card, index) => (
+          <CardComponent key={index} rank={card.rank} suit={card.suit} />
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default App

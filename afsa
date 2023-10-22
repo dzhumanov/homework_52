@@ -1,0 +1,17 @@
+[33mcommit f533a5251629975a21d0b1fd76a4034f66cf5569[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Temirlan Dzhumanov <temadjumanov@gmail.com>
+Date:   Sun Oct 22 23:03:08 2023 +0600
+
+    created Card and CardDeck classes. Finished lvl 2
+
+[33mcommit 3433efa1f8adfd65556898c2c7e7425e55d61f41[m
+Author: Temirlan Dzhumanov <temadjumanov@gmail.com>
+Date:   Sun Oct 22 22:28:52 2023 +0600
+
+    added styles for cards and finished lvl 1
+
+[33mcommit c93d4c7d0ac8595917d36fbc202e76c99c8a1f2a[m
+Author: Temirlan Dzhumanov <temadjumanov@gmail.com>
+Date:   Sun Oct 22 22:10:04 2023 +0600
+
+    initialized project
